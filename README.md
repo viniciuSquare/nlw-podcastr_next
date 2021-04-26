@@ -10,6 +10,11 @@ npm run dev
 yarn dev
 ```
 
+This was coded during the 5th edition of Next Level Week.
+
+Repo aim to complement notes taken at [this Notion page](https://www.notion.so/NLW-5-509625e6a20d4226b82ce90059dd4023), registering it accomplishment and possible changes/improvements.
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.

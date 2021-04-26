@@ -10,7 +10,7 @@ import { durationToTimeString } from '../../utils/durationToTimeString';
 import styles from './episode.module.scss'
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlayerContext } from '../../contexts /PlayerContext';
+import { usePlayer } from '../../contexts /PlayerContext';
 
 
 type Episode = {
@@ -29,7 +29,7 @@ type EpisodeProps = {
 }
 
 export default function Episode({ episode }: EpisodeProps) {
-const context = useContext(PlayerContext)
+const { play } = usePlayer()
 
   return (
     <div className={styles.episode}>
@@ -46,7 +46,7 @@ const context = useContext(PlayerContext)
           objectFit="cover"
         />
         <button>
-          <img src="/play.svg" alt="Tocar episódio"/>
+          <img src="/play.svg" alt="Tocar episódio" onClick={() => play(episode)}/>
         </button>
       </div>
       <header>
